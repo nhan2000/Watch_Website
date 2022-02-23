@@ -1,0 +1,36 @@
+.container {
+    max-width: 1024px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+.grid {
+    display: grid;
+}
+.main {
+    overflow: hidden;
+}
+.section {
+    padding: 6.5rem 0 1rem;
+
+    &__title {
+        position: relative;
+        // giá trị relative làm thay đổi vị trí tương đối so với chính nó và thằng khác không thể chiếm vị trí cũ của nó
+        font-size: var(--h3-font-size);
+        margin-bottom: var(--mb-3);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 67px;
+            height: 1px;
+            background-color: var(--first-color);
+        }
+    }
+}
