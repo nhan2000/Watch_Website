@@ -780,6 +780,7 @@ button {
   }
   .home__img {
     order: 1;
+    transform: translate(1.5rem, -6rem);
   }
   .home__data {
     padding: 0 0 3rem 6rem;
@@ -958,11 +959,17 @@ button {
 }
 @media screen and (min-width: 576px) {
   .home__img {
-    width: 340px;
+    width: 440px;
+    display: flex;
+    align-items: center;
+  }
+  .home__img-bg {
+    object-fit: cover;
+    width: 330px;
   }
 
   .featured__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
