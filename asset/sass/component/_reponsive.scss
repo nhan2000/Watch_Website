@@ -1,0 +1,115 @@
+@media screen and (max-width: 320px){
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+    .home {
+        &__img {
+            width: 220px;
+        }
+    }
+}
+@media screen and(min-width:767px){
+    .section{
+        padding: 8rem 0 1rem;
+    }
+    .cart {
+        width: 420px;
+        box-shadow: -2px 0 4px hsla(0,0%,15%,.1);
+    }
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        justify-content: initial;
+        column-gap: 3rem;
+        &__toggle,&__close {
+            display: none;
+        }
+        &__list {
+            flex-direction: row;
+            column-gap: 2.5rem;
+        }
+        &__link {
+            text-transform: initial;
+            font-size: var(--normal-font-size);
+        }
+        &__btns {
+            margin-left: auto;
+        }
+    }
+    .home {
+        &__container {
+            padding-top: 6rem;
+            grid-template-columns: 1fr max-content;
+            align-items: center;
+        }
+        &__img {
+            order: 1;
+            // transform: translate(1.5rem, -6rem);
+        }
+        &__data {
+            padding: 0 0 3rem 6rem;
+        }
+        &__social {
+            top: 47%;
+            column-gap: 2rem;
+        }
+    }
+    .featured__title,
+    .featured__price,
+    .new__title,
+    .new__price {
+        font-size: var(--normal-font-size);
+    }
+    .story__container,
+    .testimonial__container,
+    .newsletter {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .story {
+        &__section-title {
+            text-align: initial;
+
+            &:before {
+                margin: initial;
+            }
+            &__images {
+                order: -1;
+            }
+        }
+    }
+    .products {
+        &__container {
+            grid-template-columns: repeat(3, 200px);
+            justify-content: center;
+            gap: 2.5rem;
+        }
+        &__card {
+            padding: 2rem 0;
+        }
+        &__img {
+            height: 155px;
+        }
+    }
+    .newsletter {
+        &__bg {
+            text-align: initial;
+            column-gap: 2rem;
+            padding: 4.5rem;
+        }
+        &__subscribe {
+            flex-direction: row;
+        }
+        &__input{
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (min-width:992px ){
+    .section__title {
+        font-size: var(--h2-font-size);
+    }
+    
+}
