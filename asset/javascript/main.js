@@ -17,4 +17,39 @@ const navMenu = document.getElementById('nav-menu'),
     }
 
 
+const navLink = document.querySelectorAll('.nav__link');
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu');
 
+}
+navLink.forEach(n => n.addEventListener('click',linkAction))
+
+
+function scrollHeader(){
+    const header =document.getElementById('header');
+    if(this.scrollY >= 50){
+        header.classList.add('scroll-header');
+    }
+    else {
+        header.classList.remove('scroll-header')
+    }
+}
+window.addEventListener('scroll', scrollHeader)
+
+// SHOW CART
+
+const cart =document.getElementById('cart'),
+    cartShop = document.getElementById('cart-shop'),
+    cartClose =document.getElementById('cart-close');
+
+    if (cartShop){
+        cartShop.addEventListener('click',()=>{
+            cart.classList.add('show-cart');
+        })
+    }
+    if(cartClose){
+        cartClose.addEventListener('click',()=>{
+            cart.classList.remove('show-cart');
+        })
+    }

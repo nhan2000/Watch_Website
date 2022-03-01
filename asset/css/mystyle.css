@@ -233,7 +233,7 @@ button {
   top: 0;
   right: -100%;
   padding: 3.5rem 2rem;
-  transition-timing-function: 0.4s;
+  transition: 0.4s;
 }
 .cart__title-center {
   font-size: var(--h2-font-size);
@@ -742,6 +742,47 @@ button {
   .home__img {
     width: 220px;
   }
+  .home__title {
+    font-size: var(--h1-font-size);
+  }
+  .home__button {
+    font-size: var(--smaller-font-size);
+  }
+
+  .story__square,
+.story__img,
+.testimonial__square,
+.testimonial__img {
+    width: 180px;
+  }
+
+  .story__square,
+.testimonial__square {
+    height: 180px;
+  }
+
+  .products__container {
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 576px) {
+  .home__img {
+    width: 440px;
+    display: flex;
+    align-items: center;
+  }
+  .home__img-bg {
+    object-fit: cover;
+    width: 330px;
+  }
+
+  .featured__container {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
 }
 @media screen and (min-width: 767px) {
   .section {
@@ -924,56 +965,36 @@ button {
     right: 3rem;
   }
 }
-@media screen and (max-width: 320px) {
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
-  }
-
-  .home__img {
-    width: 220px;
-  }
-  .home__title {
-    font-size: var(--h1-font-size);
-  }
-  .home__button {
-    font-size: var(--smaller-font-size);
-  }
-
-  .story__square,
-.story__img,
-.testimonial__square,
-.testimonial__img {
-    width: 180px;
-  }
-
-  .story__square,
-.testimonial__square {
-    height: 180px;
-  }
-
-  .products__container {
-    grid-template-columns: repeat(1, 180px);
-    justify-content: center;
-  }
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.1);
+  display: inline-flex;
+  padding: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 8;
+  transition: 0.4s;
 }
-@media screen and (min-width: 576px) {
-  .home__img {
-    width: 440px;
-    display: flex;
-    align-items: center;
-  }
-  .home__img-bg {
-    object-fit: cover;
-    width: 330px;
-  }
+.scrollup:hover {
+  opacity: 1;
+}
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
 
-  .featured__container {
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
+.show-scroll {
+  bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background: #bdbdbd;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
 }
 
 /*# sourceMappingURL=mystyle.css.map */
